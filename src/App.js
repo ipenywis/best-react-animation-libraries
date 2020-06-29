@@ -1,24 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { FramerAnimation } from "./components/framerAnimation";
+import styled from "styled-components";
+import { SpringAnimation } from "./components/springAnimation";
+
+const Content = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 4em;
+  padding: 3em;
+`;
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h2>React Animation Libraries</h2>
+      <Content>
+        <FramerAnimation />
+        <SpringAnimation />
+      </Content>
     </div>
   );
 }
