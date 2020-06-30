@@ -3,6 +3,7 @@ import "./App.css";
 import { FramerAnimation } from "./components/framerAnimation";
 import styled from "styled-components";
 import { SpringAnimation } from "./components/springAnimation";
+import { MotionAnimation } from "./components/motionAnimation";
 
 const Content = styled.div`
   width: 100%;
@@ -21,6 +22,7 @@ function App() {
       <Content>
         <FramerAnimation />
         <SpringAnimation />
+        <MotionAnimation />
       </Content>
     </div>
   );

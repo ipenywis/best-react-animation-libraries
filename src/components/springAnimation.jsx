@@ -19,20 +19,6 @@ const Ball = styled(animated.div)`
   border: 2px solid #252525;
 `;
 
-const bounceTransition = {
-  y: {
-    duration: 1,
-    yoyo: Infinity,
-    ease: "easeIn",
-  },
-  backgroundColor: {
-    duration: 0,
-    yoyo: Infinity,
-    ease: "easeOut",
-    repeatDelay: 1,
-  },
-};
-
 const Container = Keyframes.Spring(async (next) => {
   while (true) {
     await next({
@@ -67,12 +53,7 @@ export function SpringAnimation() {
     <PreviewContainer>
       <AnimationTitle>React Spring</AnimationTitle>
       <AnimationContainer>
-        <Container>
-          {(styles) => {
-            console.log("Styles: ", styles);
-            return <Ball style={styles} />;
-          }}
-        </Container>
+        <Container>{(styles) => <Ball style={styles} />}</Container>
         <GroundContainer />
       </AnimationContainer>
     </PreviewContainer>
